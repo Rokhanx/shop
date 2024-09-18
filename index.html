@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La tienda de Luca</title>
+  <link rel="stylesheet" href="src\css\styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">La tienda de Luca</div>
+    <div class="carrito">
+      <span>🛒</span> <!-- Icono del carrito -->
+      <span id="cartCount">0</span> <!-- Cantidad de productos en el carrito -->
+    </div>
+    <button id="themeToggle" class="theme-toggle">
+      🌞
+    </button>
+    <button id="menuToggle" class="menu-toggle">☰</button>
+  </header>
+
+  <!-- Menú hamburguesa desplegable -->
+  <nav id="mobileMenu" class="mobile-menu hidden">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Ofertas</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <aside class="categorias">
+      <h2>Categorías</h2>
+      <ul id="categoryList">
+        <!-- Categorías se añadirán dinámicamente desde JS -->
+      </ul>
+    </aside>
+
+    <section class="productos" id="productos">
+      <!-- Productos se añadirán dinámicamente desde JS -->
+    </section>
+  </main>
+  <script src="src\js\getData.js"></script>
+  <script src="src\js\script.js"></script>
+</body>
+</html>
