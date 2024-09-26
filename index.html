@@ -9,37 +9,57 @@
 <body>
   <header>
     <div class="logo">La tienda de Luca</div>
-    <div class="carrito">
-      <span>🛒</span> <!-- Icono del carrito -->
-      <span id="cartCount">0</span> <!-- Cantidad de productos en el carrito -->
+    <div class="header-icons">
+      <div class="carrito">
+        <span>🛒</span>
+        <span id="cartCount">0</span>
+      </div>
+      <button id="themeToggle" class="theme-toggle">
+        🌞
+      </button>
+      <button id="menuToggle" class="menu-toggle">☰</button>
     </div>
-    <button id="themeToggle" class="theme-toggle">
-      🌞
-    </button>
-    <button id="menuToggle" class="menu-toggle">☰</button>
   </header>
 
-  <!-- Menú hamburguesa desplegable -->
   <nav id="mobileMenu" class="mobile-menu hidden">
     <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Ofertas</a></li>
-      <li><a href="#">Contacto</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
     </ul>
   </nav>
+  <!-- Modal del carrito -->
+  <div id="carritoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Carrito de Compras</h2>
+      <div class="cart-items">
+        <!-- Aquí se mostrarán los productos del carrito -->
+      </div>
+      <div class="total">
+        <strong>Total: $<span id="totalPrice">0</span></strong>
+      </div>
+    </div>
+  </div>
 
   <main>
     <aside class="categorias">
       <h2>Categorías</h2>
       <ul id="categoryList">
-        <!-- Categorías se añadirán dinámicamente desde JS -->
+        <!-- Categorías -->
       </ul>
     </aside>
 
-    <section class="productos" id="productos">
-      <!-- Productos se añadirán dinámicamente desde JS -->
-    </section>
+    <div class="main-content">
+      <div class="search-container">
+        <input type="text" id="buscador" placeholder="Buscar productos..." onkeyup="buscarProducto()">
+      </div>
+      <section class="productos" id="productos">
+        <!-- Productos  -->
+      </section>
+    </div>
   </main>
+  
   <script src="src\js\getData.js"></script>
   <script src="src\js\script.js"></script>
 </body>
