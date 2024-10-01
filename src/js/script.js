@@ -1,8 +1,17 @@
-// Función para mostrar/ocultar las categorías
 function toggleCategorias() {
   const listaCategorias = document.getElementById("categoryList");
   listaCategorias.classList.toggle("oculto");
+  // Alternar la clase 'desplegado' para aplicar la transición
+  listaCategorias.classList.toggle("desplegado");
 }
+
+let cartCount = 0;
+
+document.getElementById('addToCartButton').addEventListener('click', function() {
+  cartCount++;
+  document.getElementById('cartCount').textContent = cartCount;
+});
+
 
 let productosActuales = []; // Variable para almacenar los productos de la categoría actual
 const carrito = []; // Carrito de compras

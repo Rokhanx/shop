@@ -4,19 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La tienda de Luca</title>
-  <link rel="stylesheet" href="src\css\styles.css">
+  <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
   <header>
     <div class="logo">La tienda de Luca</div>
     <div class="header-icons">
       <div class="carrito">
-        <span>🛒</span>
+        <img src="https://img.icons8.com/?size=100&id=AgpNCyq2TYrv&format=png&color=008000" alt="Carrito">
         <span id="cartCount">0</span>
       </div>
-      <button id="themeToggle" class="theme-toggle">
-        🌞
-      </button>
+      <button id="themeToggle" class="theme-toggle">🌞</button>
       <button id="menuToggle" class="menu-toggle">☰</button>
     </div>
   </header>
@@ -28,14 +26,12 @@
       <li><a href="#">3</a></li>
     </ul>
   </nav>
-  <!-- Modal del carrito -->
+  
   <div id="carritoModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Carrito de Compras</h2>
-      <div class="cart-items">
-        <!-- Aquí se mostrarán los productos del carrito -->
-      </div>
+      <div class="cart-items"></div>
       <div class="total">
         <strong>Total: $<span id="totalPrice">0</span></strong>
       </div>
@@ -44,23 +40,29 @@
 
   <main>
     <aside class="categorias">
-      <h2>Categorías</h2>
-      <ul id="categoryList">
-        <!-- Categorías -->
-      </ul>
+      <h2 onclick="toggleCategorias()">Categorías </h2>
+      <ul id="categoryList" class="oculto"></ul>
     </aside>
 
     <div class="main-content">
       <div class="search-container">
         <input type="text" id="buscador" placeholder="Buscar productos..." onkeyup="buscarProducto()">
       </div>
-      <section class="productos" id="productos">
-        <!-- Productos  -->
-      </section>
+      <section class="productos" id="productos"></section>
     </div>
   </main>
   
-  <script src="src\js\getData.js"></script>
-  <script src="src\js\script.js"></script>
+  <button id="addToCartButton" class="pedro">Añadir al Carrito</button>
+
+  <script src="src/js/getData.js"></script>
+  <script src="src/js/script.js"></script>
+  <script>
+    let cartCount = 0;
+
+    document.getElementById('addToCartButton').addEventListener('click', function() {
+      cartCount++;
+      document.getElementById('cartCount').textContent = cartCount;
+    });
+  </script>
 </body>
 </html>
