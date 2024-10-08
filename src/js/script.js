@@ -79,7 +79,7 @@ function displayProductos(productos) {
 
     productCard.innerHTML = `
       <h3>${producto.nombre}</h3>
-      <img src="src/img/${producto.imagen}" alt="${producto.nombre}">
+      <img src="src/img/productos/${producto.imagen}" alt="${producto.nombre}">
       <p>${producto.descripcion}</p>
       <p>Precio: $${producto.precio}</p>
       <button onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio}, '${producto.imagen}', this)">Agregar al carrito</button>`;
