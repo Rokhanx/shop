@@ -5,27 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La tienda de Luca</title>
   <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
-  <header>
+  <header id="main-header">
     <div class="logo">La tienda de Luca</div>
     <div class="header-icons">
       <div class="carrito">
-        <img src="https://img.icons8.com/?size=100&id=AgpNCyq2TYrv&format=png&color=008000" alt="Carrito">
+        <img src="src/img/otros/bolsa.png" alt="Carrito">
         <span id="cartCount">0</span>
       </div>
       <button id="themeToggle" class="theme-toggle">🌞</button>
-      <button id="menuToggle" class="menu-toggle">☰</button>
+      
     </div>
   </header>
 
-  <nav id="mobileMenu" class="mobile-menu hidden">
-    <ul>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-    </ul>
-  </nav>
+  <!-- Botón de carrito flotante -->
+  <div id="floating-cart" class="floating-cart">
+    <img src="src/img/otros/bolsa.png" alt="Carrito">
+    <span id="cartCount2" class="cart-count">0</span> <!-- Ajustar aquí -->
+  </div>
+
   
   <div id="carritoModal" class="modal">
     <div class="modal-content">
@@ -40,9 +41,12 @@
 
   <main>
     <aside class="categorias">
-      <h2 onclick="toggleCategorias()">Categorías </h2>
-      <ul id="categoryList" class="oculto"></ul>
+      <h2 onclick="toggleCategorias()">Categorías <span id="flecha" class="flecha">▼</span></h2>
+
+      
+      <ul id="categoryList" class="desplegado"></ul>
     </aside>
+    
 
     <div class="main-content">
       <div class="search-container">
@@ -52,17 +56,12 @@
     </div>
   </main>
   
-  <button id="addToCartButton" class="pedro">Añadir al Carrito</button>
+  <button id="addToCartButton" class="botton">Añadir al Carrito</button>
+
+  <button id="scrollTopBtn" onclick="scrollToTop()">⬆</button>
 
   <script src="src/js/getData.js"></script>
   <script src="src/js/script.js"></script>
-  <script>
-    let cartCount = 0;
-
-    document.getElementById('addToCartButton').addEventListener('click', function() {
-      cartCount++;
-      document.getElementById('cartCount').textContent = cartCount;
-    });
-  </script>
+  <footer>La tienda de Luca un lugar para todos...</footer>
 </body>
 </html>

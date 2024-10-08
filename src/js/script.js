@@ -1,17 +1,21 @@
 function toggleCategorias() {
   const listaCategorias = document.getElementById("categoryList");
+  const flecha = document.getElementById("flecha"); // Obtiene el elemento de la flecha
   listaCategorias.classList.toggle("oculto");
-  // Alternar la clase 'desplegado' para aplicar la transición
   listaCategorias.classList.toggle("desplegado");
+
+  // Alternar la clase 'rotado' para girar la flecha
+  flecha.classList.toggle("rotado");
 }
+
 
 let cartCount = 0;
 
 document.getElementById('addToCartButton').addEventListener('click', function() {
   cartCount++;
   document.getElementById('cartCount').textContent = cartCount;
+  document.getElementById('cartCount2').textContent = cartCount;
 });
-
 
 let productosActuales = []; // Variable para almacenar los productos de la categoría actual
 const carrito = []; // Carrito de compras
@@ -52,7 +56,7 @@ function mostrarProductos(categoria, productos) {
     
     productCard.innerHTML = `
       <h3>${producto.nombre}</h3>
-      <img src="src/img/${producto.imagen}" alt="${producto.nombre}">
+      <img src="src/img/productos/${producto.imagen}" alt="${producto.nombre}">
       <p>${producto.descripcion}</p>
       <p>Precio: $${producto.precio}</p>
       <button onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio}, '${producto.imagen}', this)">Agregar al carrito</button>`;
@@ -114,6 +118,7 @@ function agregarAlCarrito(nombre, precio, imagen, button) {
   
 
   document.getElementById('cartCount').textContent = carrito.length;
+  document.getElementById('cartCount2').textContent = carrito.length;
   renderCartItems(); // Renderiza el carrito al agregar un producto
 }
 
@@ -133,23 +138,25 @@ function renderCartItems() {
     cartItem.classList.add("cart-item");
     cartItem.innerHTML = `
       <div style="display: flex; justify-content: space-between; align-items: center;">
-        <img src="src/img/${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px;">
+        <img src="src/img/productos/${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px;">
         <div style="flex-grow: 1; margin-left: 10px;">
           <h4>${item.nombre}</h4>
           <p>Precio: $${item.precio.toFixed(2)}</p>
-          <div class="quantity-controls" style="display: flex; align-items: center;">
+          <div class="quantity-controls" style="display: flex; align-items: center; gap: 10px;">
             <button class="decrease" ${item.cantidad === 1 ? "disabled" : ""}>-</button>
             <span>${item.cantidad}</span>
             <button class="increase">+</button>
           </div>
         </div>
-        <span class="remove-item" title="Eliminar" style="cursor: pointer;">&#128465;</span>
+        <button class="btn-delete" title="Eliminar" style="cursor: pointer;">
+          <i class="fas fa-trash-alt"></i> <!-- Aquí se incluye el ícono de Font Awesome -->
+        </button>
       </div>`;
-
+      
     // Eventos para aumentar, disminuir y eliminar
     cartItem.querySelector(".decrease").addEventListener("click", () => decreaseQuantity(index));
     cartItem.querySelector(".increase").addEventListener("click", () => increaseQuantity(index));
-    cartItem.querySelector(".remove-item").addEventListener("click", () => removeItem(index));
+    cartItem.querySelector(".btn-delete").addEventListener("click", () => removeItem(index));
 
     cartItemsContainer.appendChild(cartItem);
   });
@@ -175,10 +182,26 @@ function decreaseQuantity(index) {
 
 // Función para eliminar un producto del carrito
 function removeItem(index) {
-  carrito.splice(index, 1);
-  renderCartItems();
-}
+  const productName = carrito[index].nombre;
 
+  // Buscar el botón del producto correspondiente y habilitarlo
+  const productCards = document.querySelectorAll('.product-card');
+  productCards.forEach(card => {
+    const productTitle = card.querySelector('h3').textContent;
+    if (productTitle === productName) {
+      const addButton = card.querySelector('button');
+      addButton.textContent = 'Agregar al carrito';
+      addButton.disabled = false;
+      addButton.classList.remove('button-disabled'); // Remover la clase de deshabilitado
+    }
+  });
+
+  // Eliminar el producto del carrito
+  carrito.splice(index, 1);
+  renderCartItems(); // Renderizar nuevamente los productos del carrito
+  document.getElementById('cartCount').textContent = carrito.length; // Actualizar el contador
+  document.getElementById('cartCount2').textContent = carrito.length;
+}
 // Cambiar tema (día/noche)
 const themeToggle = document.getElementById('themeToggle');
 let theme = 'day'; // Valor inicial
@@ -221,4 +244,41 @@ window.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.style.display = "none";
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtener el botón de subir, el carrito y el header
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const floatingCart = document.getElementById('floating-cart');
+  const header = document.getElementById('main-header');
+
+  // Verificar que los elementos existan
+  if (!scrollTopBtn || !floatingCart || !header) {
+      console.error("Error: No se encontró uno o más elementos necesarios.");
+      return;
+  }
+
+  // Mostrar el botón y el carrito cuando el header desaparezca (al hacer scroll hacia abajo)
+  window.onscroll = function () {
+      if (window.scrollY > header.offsetHeight) {
+          floatingCart.style.display = 'flex'; // Mostrar carrito flotante
+          scrollTopBtn.style.display = 'block'; // Mostrar botón de subir
+      } else {
+          floatingCart.style.display = 'none'; // Ocultar carrito flotante
+          scrollTopBtn.style.display = 'none'; // Ocultar botón de subir
+      }
+  };
+
+  // Función para desplazarse hacia arriba
+  function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Asignar la función al botón de subir
+  scrollTopBtn.onclick = scrollToTop;
+});
+
+document.querySelector(".floating-cart").addEventListener("click", () => {
+  modal.style.display = "block";
+  renderCartItems();
 });
