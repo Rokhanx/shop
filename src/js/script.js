@@ -1,12 +1,11 @@
 function toggleCategorias() {
-  const listaCategorias = document.getElementById("categoryList");
-  const flecha = document.getElementById("flecha"); // Obtiene el elemento de la flecha
-  listaCategorias.classList.toggle("oculto");
-  listaCategorias.classList.toggle("desplegado");
-
-  // Alternar la clase 'rotado' para girar la flecha
-  flecha.classList.toggle("rotado");
+  const categoryList = document.getElementById('categoryList');
+  const flecha = document.getElementById('flecha');
+  
+  categoryList.classList.toggle('desplegado');
+  flecha.classList.toggle('rotado');
 }
+
 
 
 let cartCount = 0;
