@@ -13,7 +13,7 @@
     <div class="logo">La tienda de Luca</div>
     <div class="header-icons">
       <div class="carrito">
-        <img src="src/img/otros/bolsa.png" alt="Carrito">
+        <img src="src/img/otros/bolsa.ico" alt="Carrito">
         <span id="cartCount">0</span>
       </div>
       <button id="themeToggle" class="theme-toggle">🌞</button>
@@ -23,7 +23,7 @@
 
   <!-- Botón de carrito flotante -->
   <div id="floating-cart" class="floating-cart">
-    <img src="src/img/otros/bolsa.png" alt="Carrito">
+    <img src="src/img/otros/bolsa.ico" alt="Carrito">
     <span id="cartCount2" class="cart-count">0</span> <!-- Ajustar aquí -->
   </div>
 
@@ -36,6 +36,7 @@
       <div class="total">
         <strong>Total: $<span id="totalPrice">0</span></strong>
       </div>
+      <button id="emptyCartButton" class="empty-cart-btn">Vaciar Carrito</button> 
     </div>
   </div>
 
@@ -51,6 +52,7 @@
     <div class="main-content">
       <div class="search-container">
         <input type="text" id="buscador" placeholder="Buscar productos..." onkeyup="buscarProducto()">
+        <i class="fas fa-search search-icon"></i>
       </div>
       <section class="productos" id="productos"></section>
     </div>

@@ -120,6 +120,38 @@ function agregarAlCarrito(nombre, precio, imagen, button) {
   document.getElementById('cartCount2').textContent = carrito.length;
   renderCartItems(); // Renderiza el carrito al agregar un producto
 }
+// Función para vaciar el carrito
+function vaciarCarrito() {
+  // Recorrer los productos en el carrito y restaurar los botones
+  carrito.forEach(item => {
+    const productName = item.nombre;
+
+    // Buscar el botón del producto correspondiente y habilitarlo
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+      const productTitle = card.querySelector('h3').textContent;
+      if (productTitle === productName) {
+        const addButton = card.querySelector('button');
+        addButton.textContent = 'Agregar al carrito';
+        addButton.disabled = false;
+        addButton.classList.remove('button-disabled'); // Remover la clase de deshabilitado
+      }
+    });
+  });
+
+  // Vaciar el array del carrito
+  carrito.length = 0;
+
+  // Actualizar el contador del carrito
+  document.getElementById('cartCount').textContent = carrito.length;
+  document.getElementById('cartCount2').textContent = carrito.length;
+
+  // Renderizar el carrito vacío
+  renderCartItems();
+}
+
+// Asignar la función al botón de vaciar carrito
+document.getElementById('emptyCartButton').addEventListener('click', vaciarCarrito);
 
 // Función para renderizar los productos en el modal del carrito
 function renderCartItems() {
