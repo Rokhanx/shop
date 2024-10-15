@@ -120,7 +120,7 @@ main {
 } 
 .categorias{
   max-height: max-content;
-  width: 20%;
+  width: 21%;
   background-color: #fff;
   padding: 2rem; 
   border-radius: 12px;
@@ -379,11 +379,11 @@ button:disabled:hover {
   #buscador {
     max-width: 90%; 
     width: 100%;
-    padding: 0.5rem 2rem; /* Agregar más espacio a la derecha */
+    padding: 0.5rem 2rem;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #fff; /* Fondo blanco para mayor contraste */
+    background-color: #fff; 
   }
 
   .search-icon{
