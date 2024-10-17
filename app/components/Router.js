@@ -22,21 +22,7 @@ export const Router = () =>{
         
     }else if (hash  == "#/catalogo"){
         document.querySelector("#section").append(ModalCarrito())
-        //document.querySelector("#section").append(CategoryList())
         document.querySelector("#section").append(ContainerCards())
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 

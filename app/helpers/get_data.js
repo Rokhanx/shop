@@ -11,10 +11,10 @@ const fetchGoogleSheetData = async () => {
       const data = await response.text();
       const jsonData = JSON.parse(data.substr(47).slice(0, -2)); // Para limpiar el JSON
   
-      // Muestra los datos en la consola
+      
       console.log('Datos obtenidos de Google Sheets:', jsonData);
   
-      return jsonData.table.rows; // Ajusta según cómo necesites los datos
+      return jsonData.table.rows;
     } catch (error) {
       console.error('Error fetching Google Sheet data:', error);
       return [];

@@ -17,13 +17,13 @@ export const ModalCarrito = () => {
     </div>
     `;
 
-    // Evento para cerrar el modal al hacer clic en la 'X'
+    // Evento para cerrar el modal
     const closeButton = modal.querySelector('.close');
     closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
     });
 
-    // Evento para cerrar el modal al hacer clic fuera del contenido
+    // Evento para cerrar el modal al hacer clic fuera
     window.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.style.display = 'none';
