@@ -1,7 +1,7 @@
 // Configuración de Google Sheets
 const sheetId = "1hzaoinHPCMxYW5tR7WQqPKlUrQX-ZiwNtzLsXKkG7KQ";
 // Nombres de las hojas en la hoja de cálculo
-const sheetNames = ["Auriculares", "Teclados", "Mouse", "Camaras", "Consolas", "Joystick", "Relojes", "Baterias Portatiles", "Lamparas", "Parlantes", "Termos / Botellas", "Mopa"];
+const sheetNames = ["Auriculares", "Otros", "Teclados", "Mouse", "Camaras", "Consolas", "Joystick", "Relojes", "Baterias Portatiles", "Lamparas", "Parlantes", "Termos / Botellas", "Mopa"];
 
 // Función para obtener los datos de una hoja de Google Sheets
 async function fetchSheetData(sheetName) {

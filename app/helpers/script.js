@@ -94,7 +94,7 @@ function buscarProducto() {
   // Filtrar productos de la categoría actual
   const productosFiltrados = productosActuales.filter(producto => {
     return producto.nombre.toLowerCase().includes(input) || 
-           producto.descripcion.toLowerCase().includes(input);
+    producto.descripcion.toLowerCase().includes(input);
   });
 
   displayProductos(productosFiltrados); // Mostrar productos filtrados
