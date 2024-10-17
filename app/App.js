@@ -17,8 +17,11 @@ export const App = () => {
     divRoot.append(Main())
     Carrito()
 
-    
     Router()
+
+
+
+
     Events()
 
 

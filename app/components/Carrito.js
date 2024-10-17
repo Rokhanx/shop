@@ -3,12 +3,7 @@ import { ModalCarrito } from './ModalCarrito.js';
 
 let cartCount = 0;
 
-export const carrito = []; // Inicializa el carrito
-/*
-<div class="carrito">
-                    <img src="app/assets/icons/bolsa.png" alt="Carrito">
-                    <span id="cartCount">0</span>
-</div>  */
+export const carrito = []; // Inicializa el array carrito
 
 
 export const Carrito = () => {

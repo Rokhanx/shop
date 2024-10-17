@@ -15,7 +15,7 @@ export function renderCartItems() {
       cartItem.classList.add("cart-item");
       cartItem.innerHTML = `
         <div style="display: flex; justify-content: space-between; align-items: center;">
-          <img src="src/img/productos/${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px;">
+          <img src="app/assets/images/productos/${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px;">
           <div style="flex-grow: 1; margin-left: 10px;">
             <h4>${item.nombre}</h4>
             <p>Precio: $${item.precio}</p>
