@@ -8,10 +8,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+<<<<<<< HEAD
     
 
     <div id="root">
 
+=======
+  <header id="main-header">
+    <div class="logo">La tienda de Luca</div>
+    <div class="header-icons">
+      <div class="carrito">
+        <img src="src/img/otros/bolsa.ico" alt="Carrito">
+        <span id="cartCount">0</span>
+      </div>
+      <button id="themeToggle" class="theme-toggle">🌞</button>
+      
+    </div>
+  </header>
+
+  <!-- Botón de carrito flotante -->
+  <div id="floating-cart" class="floating-cart">
+    <img src="src/img/otros/bolsa.ico" alt="Carrito">
+    <span id="cartCount2" class="cart-count">0</span> <!-- Ajustar aquí -->
+  </div>
+
+  
+  <div id="carritoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Carrito de Compras</h2>
+      <div class="cart-items"></div>
+      <div class="total">
+        <strong>Total: $<span id="totalPrice">0</span></strong>
+      </div>
+      <button id="emptyCartButton" class="empty-cart-btn">Vaciar Carrito</button> 
+    </div>
+  </div>
+
+  <main>
+    <aside class="categorias">
+      <h2 onclick="toggleCategorias()">Categorías <span id="flecha" class="flecha">▼</span></h2>
+
+      
+      <ul id="categoryList" class="desplegado"></ul>
+    </aside>
+    
+
+    <div class="main-content">
+      <div class="search-container">
+        <input type="text" id="buscador" placeholder="Buscar productos..." onkeyup="buscarProducto()">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+      <section class="productos" id="productos"></section>
+>>>>>>> 565bdf8b9ebf835d02d2c7ce5658e4ea0b853762
     </div>
     
     <script type="module" src="/app/index.js"></script>
