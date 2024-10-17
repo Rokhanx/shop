@@ -21,10 +21,10 @@ function createCategoryList() {
         li.addEventListener('click', () => {
           console.log(`Categoría seleccionada: ${sheetName}`);
         });
-      ul.appendChild(li); // Agrega el elemento de lista a la lista
+      ul.appendChild(li);
     });
     
-    return ul; // Devuelve la lista
+    return ul; 
 }
 
 export const CategoryList = () => {

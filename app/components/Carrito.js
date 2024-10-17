@@ -33,9 +33,9 @@ export function agregarAlCarrito(nombre, precio, imagen, button) {
         carrito.push({ nombre, precio, imagen, cantidad: 1 });
     }
 
-    // Cambiar el texto y deshabilitar el botón correspondiente
+    // Cambiar el texto y deshabilitar el boton
     button.textContent = 'En el carrito';
-    //button.classList.add('button-disabled');
+    button.classList.add('button-disabled');
     button.disabled = true; // Deshabilitar el botón
 
     document.getElementById('cartCount').textContent = carrito.length;
