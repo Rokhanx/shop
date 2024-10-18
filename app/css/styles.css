@@ -102,7 +102,7 @@ header .logo:hover {
 main {
   display: flex;
   padding: 4rem;
-  max-width: 1400px;
+  
   max-height: max-content;
   margin: auto;
   justify-content: space-between;
@@ -118,7 +118,7 @@ main {
 .categorias{
   max-height: max-content;
   width: 21%;
-  background-color: #fff;
+  
   padding: 2rem; 
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -148,13 +148,6 @@ main {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.dark-theme .categorias {
-  background-color: #2e2e2e;
-  
-}
-.dark-theme .categorias h2{
-  color: #fff;
-}
 
 .categorias ul {
   list-style: none;
@@ -250,7 +243,6 @@ main {
 .product-card {
   width: 220px;
   min-height: 350px; 
-  border: 1px solid #dee2e6;
   border-radius: 10px;
   padding: 1rem;
   background-color: #ffffff;
@@ -468,15 +460,7 @@ aside{
   padding-top: 60px;
 }
 
-.modal-content {
-  background-color: #fff;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 600px;
-  position: relative;
-}
+
 
 .close {
   color: #aaa;
@@ -499,6 +483,43 @@ aside{
 }
 
 
+.categorias {
+  background-color: #f8f9fa;
+   
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.categorias h2 {
+  cursor: pointer;
+  color: #343a40;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.categorias ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.categorias li {
+  padding: 8px 0;
+}
+
+.categorias li a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.categorias li a:hover {
+  color: #0056b3;
+}
+
+
 .cart-items {
   max-height: 300px;
   overflow-y: auto;
@@ -506,7 +527,7 @@ aside{
 }
 
 .cart-item {
-  display: flex;
+  
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ddd;

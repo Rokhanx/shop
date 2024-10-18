@@ -19,7 +19,7 @@ export function renderCartItems() {
           <div style="flex-grow: 1; margin-left: 10px;">
             <h4>${item.nombre}</h4>
             <p>Precio: $${item.precio}</p>
-            <div class="quantity-controls" style="display: flex; align-items: center; gap: 10px;">
+            <div class="quantity-controls" ">
               <button class="decrease" ${item.cantidad === 1 ? "disabled" : ""}>-</button>
               <span>${item.cantidad}</span>
               <button class="increase">+</button>
