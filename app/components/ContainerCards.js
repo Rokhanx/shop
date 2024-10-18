@@ -4,7 +4,7 @@ import { agregarAlCarrito, carrito } from "./Carrito.js";
 export const ContainerCards = () => {
 
     let productosActuales = [];
-
+    //Declaracion de Tags
     let main = document.createElement("main");
     let aside = document.createElement("aside");
     aside.setAttribute("class", "categorias");

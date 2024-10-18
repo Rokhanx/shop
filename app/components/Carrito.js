@@ -16,9 +16,6 @@ export const Carrito = () => {
     `
     const header = document.querySelector(".header-icons")
     header.appendChild(div)
-
-
-
     return div
 }
 
