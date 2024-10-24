@@ -7,24 +7,24 @@ import { getCategorizedData } from "./helpers/ajax.js"
 //import { Carrito } from "./components/Carrito.js"
 import { Events } from "./components/Events.js"
 import { ModalCarrito } from "./components/ModalCarrito.js"
+import { Carrito } from "./components/Carrito.js"
 
 
 
-export const App = () => {
+export default function App() {
     let divRoot = document.querySelector("#root")
+    divRoot.innerHTML = ""
 
 
-    divRoot.append(Header())
-    divRoot.append(Main())
+    divRoot.appendChild(Header())
+    divRoot.appendChild(Main())
+    document.querySelector("#section").append(ModalCarrito())
+    Carrito()
 
+    
 
     Router()
 
 
-
-
     Events()
-
-
-
 }

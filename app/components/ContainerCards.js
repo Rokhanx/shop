@@ -1,5 +1,7 @@
 import { getCategorizedData } from "../helpers/ajax.js";
 import { agregarAlCarrito, carrito } from "./Carrito.js";
+import { sheetNames } from "../helpers/urls.js";
+import { CategoryList } from "./CategoryList.js";
 
 export const ContainerCards = () => {
 
@@ -14,6 +16,7 @@ export const ContainerCards = () => {
     ul.id = "categoryList";
     ul.setAttribute("class", "desplegado");
     aside.appendChild(ul);
+    
 
     let div = document.createElement("div");
     div.setAttribute("class", "main-content");
@@ -23,11 +26,14 @@ export const ContainerCards = () => {
     section.setAttribute("class", "productos");
     section.id = "productos";
     div.appendChild(section);
+    aside.appendChild(CategoryList())
+
+
 
     getCategorizedData().then(categorizedObjects => {
         const categoryList = document.getElementById('categoryList');
-        
-        for (const category in categorizedObjects) {
+
+        for (const category of sheetNames) {
             const li = document.createElement('li');
             li.textContent = category;
             li.addEventListener('click', () => {
@@ -38,12 +44,12 @@ export const ContainerCards = () => {
         }
 
         // Mostrar productos de la categoría por defecto
-        const defaultCategory = Object.keys(categorizedObjects)[0];
+        const defaultCategory = sheetNames[0];
         mostrarProductos(defaultCategory, categorizedObjects[defaultCategory]);
         productosActuales = categorizedObjects[defaultCategory]; // Actualizar productos de la categoría por defecto
     });
 
-    // Función para mostrar los productos de una categoría
+    //mostrar los productos de una categoría
     function mostrarProductos(categoria, productos) {
         const productosSection = document.getElementById('productos');
         productosSection.innerHTML = ''; 
@@ -59,7 +65,7 @@ export const ContainerCards = () => {
                 <p>Precio: $${producto.precio}</p>
                 <button class="add-to-cart-button">Agregar al carrito</button>`;
 
-            // Añadir el event listener al botón
+            // Evento del boton
             const button = productCard.querySelector('.add-to-cart-button');
             button.addEventListener('click', () => {
                 agregarAlCarrito(producto.nombre, producto.precio, producto.imagen, button);

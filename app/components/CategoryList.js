@@ -31,14 +31,10 @@ export const CategoryList = () => {
     let div = document.createElement("div");
     div.setAttribute("class", "categoryList");
     
-    // Agrega el título con la funcionalidad de mostrar/ocultar
+
     div.innerHTML = `
-        <h2 onclick="toggleCategorias()">Categorías <span id="flecha" class="flecha">▼</span></h2>
+        <h2>Categorías <span id="flecha" class="flecha">▼</span></h2>
     `;
-    
-    // Agrega la lista de categorías al div
-    const categoryList = createCategoryList();
-    div.appendChild(categoryList); // Agrega el <ul> generado a div
     
     return div;
 }

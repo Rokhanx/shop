@@ -2,8 +2,8 @@ import { CategoryList } from "./CategoryList.js"
 import { ContainerCards } from "./ContainerCards.js"
 import { getCategorizedData } from "../helpers/ajax.js"
 import { ModalCarrito } from "./ModalCarrito.js"
-import { CatalogoRef } from "./Catalogo.js"
 import { Carrito } from "./Carrito.js"
+import { CatalogoRef } from "./Catalogo.js"
 
 
 
@@ -16,20 +16,17 @@ export const Router = () =>{
 
     console.log(hash)
 
-
-    document.querySelector("#section").append(ModalCarrito())
-    Carrito()
     
 
-    
-
-    if (hash == "" || hash == "#/"){
-        //document.querySelector("#section").append(CatalogoRef())
+    if (location.hash === "" || hash == "#/"){
+        section.innerHTML = "";
+        document.querySelector("#section").appendChild(CatalogoRef())
 
 
         
-    }else if (hash  == "#/catalogo"){
-        document.querySelector("#section").append(ContainerCards())
+    } else if (location.hash  === "#/catalogo"){
+        section.innerHTML = ""; 
+        document.querySelector("#section").appendChild(ContainerCards())
 
     }
 
