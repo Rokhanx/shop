@@ -15,17 +15,17 @@ export const Router = () =>{
     section.innerHTML = "";
 
     console.log(hash)
+    document.querySelector("#section").appendChild(ModalCarrito())
+    Carrito()
 
     
 
     if (location.hash === "" || hash == "#/"){
-        section.innerHTML = "";
-        document.querySelector("#section").appendChild(CatalogoRef())
+        //document.querySelector("#section").appendChild(CatalogoRef())
 
 
         
     } else if (location.hash  === "#/catalogo"){
-        section.innerHTML = ""; 
         document.querySelector("#section").appendChild(ContainerCards())
 
     }

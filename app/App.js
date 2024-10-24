@@ -18,8 +18,7 @@ export default function App() {
 
     divRoot.appendChild(Header())
     divRoot.appendChild(Main())
-    document.querySelector("#section").append(ModalCarrito())
-    Carrito()
+
 
     
 

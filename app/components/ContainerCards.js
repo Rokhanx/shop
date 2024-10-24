@@ -11,6 +11,7 @@ export const ContainerCards = () => {
     let aside = document.createElement("aside");
     aside.setAttribute("class", "categorias");
     main.appendChild(aside);
+    aside.appendChild(CategoryList())
 
     let ul = document.createElement("ul");
     ul.id = "categoryList";
@@ -26,12 +27,14 @@ export const ContainerCards = () => {
     section.setAttribute("class", "productos");
     section.id = "productos";
     div.appendChild(section);
-    aside.appendChild(CategoryList())
+
+    
 
 
 
     getCategorizedData().then(categorizedObjects => {
         const categoryList = document.getElementById('categoryList');
+        
 
         for (const category of sheetNames) {
             const li = document.createElement('li');
@@ -75,6 +78,7 @@ export const ContainerCards = () => {
             productosSection.appendChild(productCard);
         });
     }
+    
 
     return main;
 };
