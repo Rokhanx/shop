@@ -15,6 +15,27 @@ header {
   padding: 1.5rem 2rem;
   
 }
+#desc{
+  font-weight: 700;
+}
+#prec{
+  font-weight:bold ;
+}
+#catal {
+  display: inline-flex;
+  align-items: center; 
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#catal:hover {
+  transform: translateY(-3px); 
+}
 
 
 header .logo {
@@ -30,14 +51,25 @@ header .logo {
 .header-icons {
   display: flex; 
   align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
 }
-
+.container { 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
 .carrito {
   position: relative;
   display: flex;
   margin-left: 20px; 
 }
-
+.carrito:hover{
+  background-color: #555; 
+  transform: translateY(-3px); 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+  border-radius: 8px;
+}
 
 .carrito span {
   position: absolute;
@@ -46,6 +78,11 @@ header .logo {
   border-radius: 50%;
   padding: 3px 7px;
   font-size: 0.8rem;
+}
+.carrito span:hover{
+  background-color: #555; 
+  transform: translateY(-3px); 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
 }
 #cartCount {
   position: absolute;
@@ -64,10 +101,17 @@ header .logo {
   margin-left: 15px;
   transition: transform 0.3s ease;
 }
-
+.theme-toggle:hover{
+  background-color: #555; 
+  transform: translateY(-3px); 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px
+  ; 
+}
 .carrito img {
   width: 30px;
-  height: 30px; 
+  height: 30px;
+  cursor: pointer; 
 }
 
 
@@ -81,6 +125,10 @@ header .logo {
 
 .menu-toggle {
   display: none; 
+}
+a:hover{
+  color: #000;
+  
 }
 
 #mobileMenu {
@@ -103,14 +151,17 @@ Main#section{
   padding-bottom: 2rem; 
   margin: 0 auto; 
 } 
-.categorias{
+
+
+/* Categorias */
+
+.categorias {
   max-height: max-content;
   width: 21%;
   padding: 2rem;
   margin: 2rem; 
   border-radius: 12px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; 
-  
 }
 
 .categorias h2 {
@@ -119,6 +170,7 @@ Main#section{
   align-items: center;
   justify-content: space-between;
   height: 3rem;
+  cursor: pointer;
 }
 
 .categorias .flecha {
@@ -136,11 +188,11 @@ Main#section{
   padding: 0;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease-out; 
+  transition: max-height 0.6s ease; 
 }
 
 .categorias ul.desplegado {
-  max-height: max-content
+  max-height: 630px; 
 }
 
 .categorias ul li {
@@ -150,16 +202,16 @@ Main#section{
 }
 
 .categorias ul li:hover {
-  
   padding-left: 10px;
 }
-.categorias h2:hover{
+
+.categorias h2:hover {
   transition: color 0.3s ease;
 }
 
 .rotado {
   transform: rotate(180deg);
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 
@@ -331,10 +383,7 @@ Main#section{
     padding-bottom: 1rem;
     position: relative;
   }
-  .home{
-    position: relative;
-    bottom: 100px;
-  }
+  
   #buscador {
     max-width: 90%; 
     width: 100%;
@@ -413,6 +462,7 @@ Main#section{
   height: 100%;
   overflow: auto;
   padding-top:60px ;
+  
 }
 
 .modal-content {
@@ -422,6 +472,7 @@ Main#section{
   max-width: 600px;
   border-radius: 10px;
   position: relative;
+  font-weight: 800;
 }
 .modal h2{
   text-align: center;
@@ -599,17 +650,8 @@ section, footer {
   transition: background-color 0.3s;
 }
 
-#categoryList.oculto {
-  display: none; /* Oculto por defecto */
-}
 
-#categoryList.desplegado {
-  display: block; /* Se muestra al hacer clic */
-}
 
-.flecha.rotado {
-  transform: rotate(180deg); /* Girar flecha cuando esté expandido */
-}
 
 
 .btn-checkout {
@@ -632,19 +674,7 @@ section, footer {
 }
 
 
-.home {
-  position:absolute; 
-  bottom: 500px; 
-  left:   10px; 
-  text-decoration: none; 
-  color: #ff0000; 
-  font-weight: bold; 
-}
 
-.home:hover {
-  text-decoration: underline; 
-  color: #6e9bcc; 
-}
 
 
 .btn-checkout .wpp {
@@ -658,6 +688,10 @@ section, footer {
   height: 20px;
 }
 
+
+
+
+        /* Home */
 .scroll-container {
   display: flex;
   flex-direction: column;
@@ -685,10 +719,8 @@ section, footer {
   box-sizing: border-box;
   text-align: center;
   padding: 10px;
-  background-color: white;
   border-radius: 10px;
   margin: 10px 0; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .product-card1 h3 {
@@ -706,7 +738,7 @@ section, footer {
 
 .product-card1 p {
   margin: 10px 0;
-  color: #555;
+  
 }
 
 .carousel-button {
@@ -715,8 +747,6 @@ section, footer {
   transform: translateY(-50%);
   padding: 10px 15px;
   cursor: pointer;
-  background-color: rgba(0, 123, 255, 0.9);
-  color: white;
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -730,9 +760,7 @@ section, footer {
   right: 10px;
 }
 
-.carousel-button:hover {
-  background-color: rgba(0, 86, 179, 1);
-}
+
 
 @media (max-width: 600px) {
   .carousel-button {
@@ -743,6 +771,4 @@ section, footer {
       font-size: 1.2em;
   }
 }
-a{
-  text-decoration: none;
-}
+

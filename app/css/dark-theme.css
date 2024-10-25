@@ -10,6 +10,7 @@ header{
 }
 a{
   color: #fff;
+  text-decoration: none;
 }
 a:hover{
   color:#ff4757;
@@ -27,7 +28,7 @@ a:hover{
 } 
 
 h4{
-  color: black;
+  color: white;
 }
 #cartCount{
     background-color: #ff0000;
@@ -40,13 +41,19 @@ h4{
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     
   }
+  .categorias:hover{
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
 .categorias h2{
     color: #fff;
   }
 .categorias ul li:hover {
     color: #ff4757;
   }
-  
+  .categorias h2:hover{
+    color: #ff4757;
+}
+
   
 
   /* Productos */
@@ -109,3 +116,35 @@ footer {
   #totalPrice {
     color: #058f3e;
   }
+/* HOME */
+.product-card1{
+  background-color: #2e2e2e;
+  border-color: #444;
+  color: #f8f9fa;
+}
+.product-card1 p {
+  color: #fff;
+  font-weight:bold ;
+}
+.carousel-button{
+  background-color: rgba(255, 0, 0, 0.9);
+  color: white;
+
+}
+.carousel-button:hover {
+  background-color: rgb(179, 0, 0);
+}
+#desc{
+  color: #fff;
+}
+#prec{
+  color: #1DA851;
+}
+#catal{
+  color: #fff;
+
+}
+#catal:hover {
+  background-color: #555;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  
+}

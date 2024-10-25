@@ -26,6 +26,7 @@ export const homepage = async () => {
         imageContainer.classList.add("image-container");
 
         let currentIndex = 0;
+        let autoScrollInterval;
 
         // Crear las tarjetas de productos
         productos.forEach((producto, index) => {
@@ -34,8 +35,8 @@ export const homepage = async () => {
             productCard.innerHTML = `
                 <h4>${producto.nombre}</h4>
                 <img src="app/assets/images/productos/${producto.imagen}" alt="${producto.nombre}">
-                <p>${producto.descripcion}</p>
-                <p>Precio: $${producto.precio}</p>
+                <p id="desc">${producto.descripcion}</p>
+                <p id="prec">Precio: $${producto.precio}</p>
             `;
             imageContainer.appendChild(productCard); // Agregar las tarjetas dentro del imageContainer
         });
@@ -56,6 +57,7 @@ export const homepage = async () => {
         prevButton.onclick = () => {
             currentIndex = (currentIndex - 1 + productos.length) % productos.length;
             updateVisibleImage();
+            resetAutoScroll();
         };
 
         const nextButton = document.createElement("button");
@@ -64,7 +66,25 @@ export const homepage = async () => {
         nextButton.onclick = () => {
             currentIndex = (currentIndex + 1) % productos.length;
             updateVisibleImage();
+            resetAutoScroll();
         };
+
+        // Función para cambiar de imagen automáticamente cada 4 segundos
+        const startAutoScroll = () => {
+            autoScrollInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % productos.length;
+                updateVisibleImage();
+            }, 4000); // Cambia cada 4 segundos
+        };
+
+        // Función para resetear el auto-scroll cuando se hace clic en los botones
+        const resetAutoScroll = () => {
+            clearInterval(autoScrollInterval);
+            startAutoScroll();
+        };
+
+        // Iniciar el auto-scroll
+        startAutoScroll();
 
         // Añadir elementos al contenedor
         carouselContainer.appendChild(imageContainer);

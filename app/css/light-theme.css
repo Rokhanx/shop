@@ -11,6 +11,7 @@ header{
 }
 a{
   color: #fff;
+  text-decoration: none;
 }
 a:hover{
   color: #ff4757;
@@ -125,6 +126,7 @@ aside{
  #totalPrice {
     color: #058f3e;
   }
+  
 
 
   /* Boton de subir */
@@ -164,4 +166,33 @@ aside{
   .empty-cart-btn:hover {
     background-color: #ff0000; 
   }
+    /* HOME */
+  .product-card1{
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  .product-card1 p {
+    color: #555;
+  }
+  .carousel-button{
+    background-color: rgba(255, 0, 0, 0.9);
+    color: white;
   
+  }
+  .carousel-button:hover {
+    background-color: rgb(179, 0, 0);
+  }
+  #desc{
+    color: #000;
+  }
+  #prec{
+    color: #1DA851;
+  }
+  #catal{
+    color: #fff;
+
+  }
+  #catal:hover {
+    background-color: #555;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  
+  }

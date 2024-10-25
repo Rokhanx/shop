@@ -18,7 +18,7 @@ export function renderCartItems() {
           <img src="app/assets/images/productos/${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px;">
           <div style="flex-grow: 1; margin-left: 10px;">
             <h4>${item.nombre}</h4>
-            <p>Precio: $${item.precio}</p>
+            <p>Precio: $<span id="totalPrice"></p>
             <div class="quantity-controls" style="display: flex; align-items: center; gap: 10px;">
               <button class="decrease" ${item.cantidad === 1 ? "disabled" : ""}>-</button>
               <span>${item.cantidad}</span>
