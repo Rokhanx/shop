@@ -5,7 +5,6 @@ import { ModalCarrito } from "./ModalCarrito.js"
 import { Carrito } from "./Carrito.js"
 import { CatalogoRef } from "./Catalogo.js"
 import { homepage } from "../js/home.js"
-import paginainicio from "../js/inicio.js"
 
 
 
