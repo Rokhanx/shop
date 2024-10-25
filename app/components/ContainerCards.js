@@ -5,6 +5,7 @@ import { CategoryList } from "./CategoryList.js";
 
 export const ContainerCards = () => {
 
+
     let productosActuales = [];
     //Declaracion de Tags
     let main = document.createElement("main");
@@ -32,7 +33,7 @@ export const ContainerCards = () => {
 
 
 
-    getCategorizedData().then(categorizedObjects => {
+    getCategorizedData(sheetNames).then(categorizedObjects => {
         const categoryList = document.getElementById('categoryList');
         
 

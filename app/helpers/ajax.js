@@ -1,5 +1,4 @@
 import { SHEETID } from "./urls.js"
-import { sheetNames } from "./urls.js"
 
 console.time("Fetch Time");
 
@@ -31,7 +30,7 @@ function csvSplit(row) {
 }
 
 
-export const getCategorizedData = async () => {
+export const getCategorizedData = async (sheetNames) => {
     const startTime = performance.now(); 
     const categorizedObjects = {};
     const fetchPromises = sheetNames.map(async (sheetName) => {

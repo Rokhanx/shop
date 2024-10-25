@@ -4,11 +4,14 @@ import { getCategorizedData } from "../helpers/ajax.js"
 import { ModalCarrito } from "./ModalCarrito.js"
 import { Carrito } from "./Carrito.js"
 import { CatalogoRef } from "./Catalogo.js"
+import { homepage } from "../js/home.js"
+import paginainicio from "../js/inicio.js"
 
 
 
 
-export const Router = () =>{
+
+export const Router = async () =>{
 
     let {hash} = location
 
@@ -21,8 +24,9 @@ export const Router = () =>{
     
 
     if (location.hash === "" || hash == "#/"){
-        //document.querySelector("#section").appendChild(CatalogoRef())
-
+        const homeContent = await homepage();
+        section.appendChild(homeContent);
+        
 
         
     } else if (location.hash  === "#/catalogo"){
