@@ -18,8 +18,8 @@ export function renderCartItems() {
           <img src="app/assets/images/productos/${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px;">
           <div style="flex-grow: 1; margin-left: 10px;">
             <h4>${item.nombre}</h4>
-            <p>Precio: $${item.precio}</p>
-            <div class="quantity-controls" ">
+            <p>Precio: $<span id="totalPrice"></p>
+            <div class="quantity-controls" style="display: flex; align-items: center; gap: 10px;">
               <button class="decrease" ${item.cantidad === 1 ? "disabled" : ""}>-</button>
               <span>${item.cantidad}</span>
               <button class="increase">+</button>
@@ -38,18 +38,18 @@ export function renderCartItems() {
       cartItemsContainer.appendChild(cartItem);
     });
   
-    // Mostrar el total
+    
     const totalPrice = carrito.reduce((total, item) => total + item.precio * item.cantidad, 0);
     document.getElementById("totalPrice").textContent = totalPrice.toFixed(2);
   }
   
-  // Función para aumentar la cantidad de un producto
+  
   function increaseQuantity(index) {
     carrito[index].cantidad += 1;
     renderCartItems();
   }
   
-  // Función para disminuir la cantidad de un producto
+
   function decreaseQuantity(index) {
     if (carrito[index].cantidad > 1) {
       carrito[index].cantidad -= 1;
@@ -57,7 +57,7 @@ export function renderCartItems() {
     }
   }
   
-  // Función para eliminar un producto del carrito
+  
   function removeItem(index) {
     const productName = carrito[index].nombre;
   
@@ -76,6 +76,6 @@ export function renderCartItems() {
     // Eliminar el producto del carrito
     carrito.splice(index, 1);
     renderCartItems(); // Renderizar nuevamente los productos del carrito
-    document.getElementById('cartCount').textContent = carrito.length; // Actualizar el contador
+    document.getElementById('cartCount').textContent = carrito.length;
     document.getElementById('cartCount2').textContent = carrito.length;
   }

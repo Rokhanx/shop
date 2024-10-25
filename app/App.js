@@ -4,27 +4,31 @@ import { Main } from "./components/Main.js"
 import { Router } from "./components/Router.js"
 import { getCategorizedData } from "./helpers/ajax.js"
 //import { toggleTheme } from '../app/helpers/theme.js';
-import { Carrito } from "./components/Carrito.js"
+//import { Carrito } from "./components/Carrito.js"
 import { Events } from "./components/Events.js"
+import { ModalCarrito } from "./components/ModalCarrito.js"
+import { Carrito } from "./components/Carrito.js"
+import { Footer } from "./components/Footer.js"
 
 
-
-export const App = () => {
+export default function App() {
     let divRoot = document.querySelector("#root")
+    divRoot.innerHTML = ""
 
 
-    divRoot.append(Header())
-    divRoot.append(Main())
+    divRoot.appendChild(Header())
+    divRoot.appendChild(Main())
+
+
+
+    divRoot.appendChild(Footer())
     
-    Carrito()
+
+
+    
 
     Router()
 
 
-
-
     Events()
-
-
-
 }

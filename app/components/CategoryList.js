@@ -7,38 +7,28 @@ export function toggleCategorias() {
   flecha.classList.toggle('rotado');
 }
 
-
-
-function createCategoryList() {
-    const ul = document.createElement('ul');
-    ul.id = "categoryList"
-    ul.style.listStyleType = 'none';
-
-    sheetNames.forEach(sheetName => {
-      const li = document.createElement('li');
-      li.textContent = sheetName;
-      // Añadir un evento
-        li.addEventListener('click', () => {
-          console.log(`Categoría seleccionada: ${sheetName}`);
-        });
-      ul.appendChild(li);
-    });
-    
-    return ul; 
-}
-
 export const CategoryList = () => {
     let div = document.createElement("div");
     div.setAttribute("class", "categoryList");
+
+    let h2 = document.createElement("h2");
+    h2.innerText = "Categorias";
+
+    let span = document.createElement("span");
+    span.id = "flecha";
+    span.className = "flecha";
+    span.innerText = "▼";
+    h2.appendChild(span);
+
+    h2.addEventListener("click", toggleCategorias);
+
+    div.appendChild(h2);
+
     
-    // Agrega el título con la funcionalidad de mostrar/ocultar
-    div.innerHTML = `
-        <h2 onclick="toggleCategorias()">Categorías <span id="flecha" class="flecha">▼</span></h2>
-    `;
-    
-    // Agrega la lista de categorías al div
-    const categoryList = createCategoryList();
-    div.appendChild(categoryList); // Agrega el <ul> generado a div
-    
+    const ul = document.createElement("ul");
+    ul.id = "categoryList";
+    ul.classList.add("oculto");
+    div.appendChild(ul);
+
     return div;
 }

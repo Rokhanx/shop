@@ -2,27 +2,34 @@ import { CategoryList } from "./CategoryList.js"
 import { ContainerCards } from "./ContainerCards.js"
 import { getCategorizedData } from "../helpers/ajax.js"
 import { ModalCarrito } from "./ModalCarrito.js"
+import { Carrito } from "./Carrito.js"
+import { CatalogoRef } from "./Catalogo.js"
+import { homepage } from "../js/home.js"
 
 
 
 
-export const Router = () =>{
+
+export const Router = async () =>{
 
     let {hash} = location
 
     section.innerHTML = "";
 
     console.log(hash)
+    document.querySelector("#section").appendChild(ModalCarrito())
+    Carrito()
 
     
 
-    if (hash == "" || hash == "#/"){
-        document.querySelector("#section").append(ModalCarrito())
+    if (location.hash === "" || hash == "#/"){
+        const homeContent = await homepage();
+        section.appendChild(homeContent);
+        
 
         
-    }else if (hash  == "#/catalogo"){
-        document.querySelector("#section").append(ModalCarrito())
-        document.querySelector("#section").append(ContainerCards())
+    } else if (location.hash  === "#/catalogo"){
+        document.querySelector("#section").appendChild(ContainerCards())
 
     }
 

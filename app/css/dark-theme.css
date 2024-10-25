@@ -1,92 +1,150 @@
 .dark-theme {
     background-color: #181818;
     color: #f8f9fa;
-  }
-  
-.theme-toggle,
-.menu-toggle {
-    color: #ffcc00;
-  }
-  
- main {
-    background-color: #222; 
-    padding-bottom: 2rem; 
-    margin: 0 auto; 
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); 
-  } 
- 
-  .categorias {
-    background-color: #222;
+}
+/* el encabezado */
+header{
+  background-color: #282c34;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
+a:hover{
+  color:#ff4757;
+}
+.carrito span {
+    background-color: #ff4757;
+    color: white;
+}
+#cartCount{
+    background-color: #ff0000;
+    color: white;
+}
+.theme-toggle, .menu-toggle {
+    color: white;
+} 
+
+h4{
+  color: white;
+}
+#cartCount{
+    background-color: #ff0000;
+    color: white;
+}
+
+/*Categorias */
+.categorias {
+    background-color: #2e2e2e;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     
-    border-radius: 5px;
-    padding: 15px;
-    margin: 20px 0;
   }
-  
-  .categorias h2 {
-    cursor: pointer;
-    color: #343a40;
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
+  .categorias:hover{
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.categorias h2{
+    color: #fff;
   }
-  
-  .categorias ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    color:white;
+.categorias ul li:hover {
+    color: #ff4757;
   }
+  .categorias h2:hover{
+    color: #ff4757;
+}
+
   
-  .categorias li {
-    padding: 8px 0;
-  }
-  
-  .categorias li a {
-    text-decoration: none;
-    color: #007bff;
-    transition: color 0.3s;
-  }
-  
-  .categorias li a:hover {
-    color: #0056b3;
-  }
-  
- .product-card {
+
+  /* Productos */
+  .product-card {
     background-color: #2e2e2e;
     border-color: #444;
     color: #f8f9fa;
   }
-  
-.product-card button:hover {
+  .product-card button {
+    background-color: #ff0000;
+    color: white;
+}
+  .product-card button:hover {
     background-color: #c21111;
   }
-button:disabled:hover {
+  button:disabled {
     background-color: #8f9294;
   }
-.product-card h3 {
+  button:disabled:hover {
+    background-color: #8f9294;
+  }
+  .product-card h3{
     color: white;
   }
   
-#buscador {
-    border-color: #888;
-    background-color: #444;
-    color: #f8f9fa;
-  }
   
+ /* Modal */
  .modal-content {
     background-color: #2e2e2e;
     border-color: #444;
     color: #f8f9fa;
   }
-  
- h2 {
-    text-align: center;
+
+  h2{
     color: #fff;
-  }
-  
+}
 footer {
-    background-color: #181818; 
+    background-color: #282c34; 
     color: #f8f9fa;
   }
+
+   /* Carro */
+   .cart-item {
+    border-bottom: 1px solid #ddd;
+  }
+  .cart-item p {
+    color: #fff;
+  }
+  .quantity-controls button{
+    background-color: #3498db;
+    color: white;
+  }
+  .quantity-controls button:disabled {
+    background-color: #ccc;
+  }
   
+  .quantity-controls button:hover:not(:disabled) {
+    background-color: #2980b9;
+  }
+  #totalPrice {
+    color: #058f3e;
+  }
+/* HOME */
+.product-card1{
+  background-color: #2e2e2e;
+  border-color: #444;
+  color: #f8f9fa;
+}
+.product-card1 p {
+  color: #fff;
+  font-weight:bold ;
+}
+.carousel-button{
+  background-color: rgba(255, 0, 0, 0.9);
+  color: white;
+
+}
+.carousel-button:hover {
+  background-color: rgb(179, 0, 0);
+}
+#desc{
+  color: #fff;
+}
+#prec{
+  color: #1DA851;
+}
+#catal{
+  color: #fff;
+
+}
+#catal:hover {
+  background-color: #555;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  
+}
