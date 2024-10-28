@@ -3,10 +3,11 @@ export const Header = () => {
 
     nav.innerHTML =`
     <header id="main-header">
-        <div class="logo">La tienda de Luca</div>
+        <div class="logo"><a href="">La tienda de Luca</a></div>
             <div class="header-icons">
                 <button id="themeToggle" class="theme-toggle">🌞</button>
             </div>
+            <a class="home" href="#/catalogo">Catalogo</a>
     </header>
     `
     return nav

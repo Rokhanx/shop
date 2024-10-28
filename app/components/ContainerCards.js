@@ -5,12 +5,14 @@ import { CategoryList } from "./CategoryList.js";
 
 export const ContainerCards = () => {
 
+
     let productosActuales = [];
     //Declaracion de Tags
     let main = document.createElement("main");
     let aside = document.createElement("aside");
     aside.setAttribute("class", "categorias");
     main.appendChild(aside);
+    aside.appendChild(CategoryList())
 
     let ul = document.createElement("ul");
     ul.id = "categoryList";
@@ -26,12 +28,14 @@ export const ContainerCards = () => {
     section.setAttribute("class", "productos");
     section.id = "productos";
     div.appendChild(section);
-    aside.appendChild(CategoryList())
+
+    
 
 
 
-    getCategorizedData().then(categorizedObjects => {
+    getCategorizedData(sheetNames).then(categorizedObjects => {
         const categoryList = document.getElementById('categoryList');
+        
 
         for (const category of sheetNames) {
             const li = document.createElement('li');
@@ -75,6 +79,7 @@ export const ContainerCards = () => {
             productosSection.appendChild(productCard);
         });
     }
+    
 
     return main;
 };

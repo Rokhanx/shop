@@ -4,28 +4,31 @@ import { getCategorizedData } from "../helpers/ajax.js"
 import { ModalCarrito } from "./ModalCarrito.js"
 import { Carrito } from "./Carrito.js"
 import { CatalogoRef } from "./Catalogo.js"
+import { homepage } from "../js/home.js"
 
 
 
 
-export const Router = () =>{
+
+export const Router = async () =>{
 
     let {hash} = location
 
     section.innerHTML = "";
 
     console.log(hash)
+    document.querySelector("#section").appendChild(ModalCarrito())
+    Carrito()
 
     
 
     if (location.hash === "" || hash == "#/"){
-        section.innerHTML = "";
-        document.querySelector("#section").appendChild(CatalogoRef())
-
+        const homeContent = await homepage();
+        section.appendChild(homeContent);
+        
 
         
     } else if (location.hash  === "#/catalogo"){
-        section.innerHTML = ""; 
         document.querySelector("#section").appendChild(ContainerCards())
 
     }

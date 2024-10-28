@@ -9,32 +9,22 @@ export function toggleCategorias() {
 
 
 
-function createCategoryList() {
-    const ul = document.createElement('ul');
-    ul.id = "categoryList"
-    ul.style.listStyleType = 'none';
-
-    sheetNames.forEach(sheetName => {
-      const li = document.createElement('li');
-      li.textContent = sheetName;
-      // Añadir un evento
-        li.addEventListener('click', () => {
-          console.log(`Categoría seleccionada: ${sheetName}`);
-        });
-      ul.appendChild(li);
-    });
-    
-    return ul; 
-}
 
 export const CategoryList = () => {
     let div = document.createElement("div");
     div.setAttribute("class", "categoryList");
-    
 
-    div.innerHTML = `
-        <h2>Categorías <span id="flecha" class="flecha">▼</span></h2>
-    `;
+    let h2 = document.createElement("h2")
+    h2.innerText ="Categorias"
+    let span = document.createElement("span")
+    span.id = "flecha"
+    span.className = "flecha"
+    span.innerText = "▼"
+    h2.appendChild(span)
+
+
+  
+    div.appendChild(h2)
     
     return div;
 }
