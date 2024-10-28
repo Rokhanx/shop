@@ -1,5 +1,6 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -260,6 +261,17 @@ Main#section{
   color: #f8f9fa;
 }
 
+#floating-cart {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
 
 
 /* Productos */
@@ -267,8 +279,8 @@ Main#section{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; 
-  align-items: stretch; 
-  gap: 1.5rem;
+  align-items: center; 
+  gap: 1.0rem;
 }
 
 .product-card {
@@ -295,7 +307,6 @@ Main#section{
 
 .product-card h3 {
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
   height: 40px; 
    
 }

@@ -11,8 +11,8 @@ export const ModalCarrito = () => {
         <h2>Carrito de Compras</h2>
         <div class="cart-items"></div>
         <div class="cart-summary">
-        <p>Total: $<span id="totalPrice">0.00</span></p>
-        <button class="btn-checkout">Finalizar compra
+            <p>Total: $<span id="totalPrice">0.00</span></p>
+            <button class="btn-checkout">Finalizar compra
                 <img id="foo" class="wpp" src="app/assets/icons/wpp1.png" alt="WhatsApp Logo">
             </button>
         </div>
@@ -20,7 +20,7 @@ export const ModalCarrito = () => {
     `;
 
     // Número de WhatsApp predefinido
-    const whatsappNumber = '5493484237789';  // Reemplaza con el número correcto
+    const whatsappNumber = '5493484237789';
 
     // Evento para cerrar el modal
     const closeButton = modal.querySelector('.close');
@@ -40,10 +40,9 @@ export const ModalCarrito = () => {
     checkoutButton.addEventListener('click', () => {
         // Obtener los productos del carrito
         const cartItems = document.querySelector('.cart-items');
-        const items = cartItems.querySelectorAll('.item'); // Asegúrate de que los productos tengan la clase 'item'
+        const items = cartItems.querySelectorAll('.item');
 
         let mensaje = 'Hola, me gustaría realizar el siguiente pedido:\n';
-
         items.forEach(item => {
             const nombre = item.querySelector('.item-name').textContent;
             const cantidad = item.querySelector('.item-quantity').textContent;

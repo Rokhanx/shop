@@ -1,12 +1,12 @@
-.dark-theme {
-    background-color: #181818;
-    color: #f8f9fa;
-}
+
 /* el encabezado */
 header{
   background-color: #282c34;
   color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+main{
+  background-color: #40444b;
 }
 a{
   color: #fff;
@@ -45,6 +45,9 @@ h4{
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 .categorias h2{
+    color: #fff;
+  }
+  .categorias ul li{
     color: #fff;
   }
 .categorias ul li:hover {
