@@ -8,6 +8,7 @@ export const Header = () => {
             <div class="header-icons">
                 <button id="themeToggle" class="theme-toggle">🌞</button>
             </div>
+            <a class="home" href="#/catalogo">Catalogo</a>
     </header>
     `
     return nav
