@@ -3,8 +3,11 @@ export const Footer = () => {
 
 
     footer.innerHTML=`
-    <footer>Todos los derechos reservados</footer>
-    <img id="foo" class="about"  src="app/assets/icons/icons8-información-16.png" alt="about us">
+    <footer>
+    <span>Todos los derechos reservados</span>
+    <img id="foo" class="about" src="app/assets/icons/abt.png" alt="about us" />
+</footer>
+
     `
     return footer
 }

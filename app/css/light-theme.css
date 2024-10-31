@@ -166,33 +166,29 @@ aside{
   .empty-cart-btn:hover {
     background-color: #ff0000; 
   }
-    /* HOME */
-  .product-card1{
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  }
-  .product-card1 p {
-    color: #555;
-  }
-  .carousel-button{
-    background-color: rgba(255, 0, 0, 0.9);
-    color: white;
+    /* ERROR 404 */
+    #error404{
+      color: #da0303;
+    }
   
+  .backhome {
+      color: #000;
+      background-color: #fff;
+      border: 2px solid #000;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px; 
+      font-size: 1rem;
   }
-  .carousel-button:hover {
-    background-color: rgb(179, 0, 0);
+  
+  .backhome:hover {
+      color: #fff;
+      background-color: #ff4c4c;
+      border-color: #ff4c4c;
+      transform: scale(1.05);
   }
-  #desc{
-    color: #000;
-  }
-  #prec{
-    color: #1DA851;
-  }
-  #catal{
-    color: #fff;
-
-  }
-  #catal:hover {
-    background-color: #555;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  
-  }
+  
+  
