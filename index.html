@@ -11,12 +11,25 @@
 </head>
 <body>
     
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
 
     <div id="root">
 
     </div>
     
+ <script>
+  window.addEventListener("load", function() {
+    setTimeout(function() {
+      document.getElementById("preloader").style.display = "none";
+    }, 1500); 
+   });
+   
+ </script>
+
     <script src="./app/index.js" type="module"></script>
+    
 </body>
 
 </html>
