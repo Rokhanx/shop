@@ -1,9 +1,6 @@
-import { CategoryList } from "./CategoryList.js"
 import { ContainerCards } from "./ContainerCards.js"
-import { getCategorizedData } from "../helpers/ajax.js"
 import { ModalCarrito } from "./ModalCarrito.js"
 import { Carrito } from "./Carrito.js"
-import { CatalogoRef } from "./Catalogo.js"
 import { homepage } from "../js/home.js"
 import { Error404 } from "./Error404.js"
 
@@ -29,8 +26,8 @@ export const Router = async () =>{
     } else if (location.hash  === "#/catalogo"){
         document.querySelector("#section").appendChild(ContainerCards())
     } else {
+        //Muestra una pagina de error en el caso que la url este mal
         document.querySelector("#section").appendChild(Error404())
-
     }
 
 

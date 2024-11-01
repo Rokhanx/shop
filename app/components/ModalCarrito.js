@@ -13,7 +13,7 @@ export const ModalCarrito = () => {
         <div class="cart-summary">
             <p>Total: $<span id="totalPrice">0.00</span></p>
             <button class="btn-checkout">Finalizar compra
-                <img id="foo" class="wpp" src="app/assets/icons/wpp1.png" alt="WhatsApp Logo">
+            <img id="foo" class="wpp" src="app/assets/icons/wpp1.png" alt="WhatsApp Logo">
             </button>
         </div>
     </div>

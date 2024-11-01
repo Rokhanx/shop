@@ -77,5 +77,5 @@ export function renderCartItems() {
     carrito.splice(index, 1);
     renderCartItems(); // Renderizar nuevamente los productos del carrito
     document.getElementById('cartCount').textContent = carrito.length;
-    document.getElementById('cartCount2').textContent = carrito.length;
+    // document.getElementById('cartCount2').textContent = carrito.length;
   }

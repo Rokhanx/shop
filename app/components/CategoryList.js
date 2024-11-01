@@ -27,7 +27,7 @@ export const CategoryList = () => {
     
     const ul = document.createElement("ul");
     ul.id = "categoryList";
-    ul.classList.add("oculto");
+    ul.classList.add("desplegado");
     div.appendChild(ul);
 
     return div;
