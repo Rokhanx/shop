@@ -5,6 +5,7 @@ import { ModalCarrito } from "./ModalCarrito.js"
 import { Carrito } from "./Carrito.js"
 import { CatalogoRef } from "./Catalogo.js"
 import { homepage } from "../js/home.js"
+import { Error404 } from "./Error404.js"
 
 
 
@@ -24,12 +25,11 @@ export const Router = async () =>{
 
     if (location.hash === "" || hash == "#/"){
         const homeContent = await homepage();
-        section.appendChild(homeContent);
-        
-
-        
+        section.appendChild(homeContent);   
     } else if (location.hash  === "#/catalogo"){
         document.querySelector("#section").appendChild(ContainerCards())
+    } else {
+        document.querySelector("#section").appendChild(Error404())
 
     }
 
