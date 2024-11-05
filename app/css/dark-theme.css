@@ -30,7 +30,9 @@ a:hover{
 .theme-toggle, .menu-toggle {
     color: white;
 } 
-
+.catalogo1{
+  background-color: #282c34;
+}
 h4{
   color: white;
 }
@@ -124,14 +126,14 @@ footer {
     color: #058f3e;
   }
   /* ERROR 404 */
-  #error404{
+  #error404{ 
     color: #ff0000;
   }
 
 .backhome {
-    color: #000;
-    background-color: #fff;
-    border: 2px solid #000;
+    color: #ffffff;
+    background-color: #ff4c4c;
+    border: 2px solid #ccc;
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
@@ -147,4 +149,15 @@ footer {
     border-color: #ff4c4c;
     transform: scale(1.05);
 }
-
+.carousel-button{
+  background-color: #ccc;
+ 
+}
+.carousel-button:hover{
+  color: red;
+  transform:translate(5);
+}
+.product-card1{
+  background-color: #3b3e44;
+  box-shadow: #058f3e;
+}

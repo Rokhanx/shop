@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f2f5;
+    background-color: #dadadb;
     transition: background-color 0.3s ease, color 0.3s ease;
     color: #333;
 }
@@ -191,4 +191,12 @@ aside{
       transform: scale(1.05);
   }
   
-  
+  .catalogo1{
+    color: #fff;
+    background-color: #282c34;
+    border: 2px solid #000;
+  }
+  .carousel-button:hover{
+    color: red;
+    transform:translate(5);
+  }

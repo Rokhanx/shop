@@ -12,7 +12,7 @@ export const homepage = async () => {
     // Crear el encabezado de productos destacados una sola vez
     const header = document.createElement("h2");
     header.classList.add("destc");
-    header.textContent = "Productos Destacados"; // Cambia el texto según sea necesario
+    header.textContent = "Productos Destacados 🥵🔥 "; // Cambia el texto según sea necesario
     container.appendChild(header); // Agregar el encabezado al contenedor
 
     // Iterar sobre cada hoja para crear las tarjetas de productos
