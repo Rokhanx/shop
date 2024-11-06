@@ -3,9 +3,11 @@ export function Error404 () {
     div.id = "error404"
 
     div.innerHTML = `
-    <h3>Error 404</h3>
-    <a href="" class="backhome">Volver al inicio</a>
-    
+      <div class="content">
+        <h3>Error 404</h3>
+        <img id="crz" class="error" src="app/assets/icons/cruz.png" alt="cruz" />
+      </div>
+      <a href="" class="backhome">Volver al inicio</a>
     `
 
     return div
