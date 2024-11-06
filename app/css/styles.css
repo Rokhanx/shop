@@ -144,7 +144,7 @@ main {
   /* max-width: 1400px; */
   max-height: max-content;
   margin: auto;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex: 1;
   min-height: 80vh;
 }
