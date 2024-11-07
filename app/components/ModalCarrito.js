@@ -1,3 +1,5 @@
+import { carrito } from "./Carrito.js";
+
 export const ModalCarrito = () => {
     // Crear el modal
     const modal = document.createElement('div');
@@ -19,7 +21,7 @@ export const ModalCarrito = () => {
     </div>
     `;
 
-    // Número de WhatsApp predefinido
+    // Número de WhatsApp predefinido 5493484237789
     const whatsappNumber = '5493484237789';
 
     // Evento para cerrar el modal
@@ -41,19 +43,20 @@ export const ModalCarrito = () => {
         // Obtener los productos del carrito
         const cartItems = document.querySelector('.cart-items');
         const items = cartItems.querySelectorAll('.item');
+        //console.log(carrito.length);
 
         let mensaje = 'Hola, me gustaría realizar el siguiente pedido:\n';
-        items.forEach(item => {
-            const nombre = item.querySelector('.item-name').textContent;
-            const cantidad = item.querySelector('.item-quantity').textContent;
-            mensaje += `- ${nombre} (Cantidad: ${cantidad})\n`;
+        carrito.forEach(item => {
+            //const nombre = item.querySelector('.item-name').textContent;
+            //const cantidad = item.querySelector('.item-quantity').textContent;
+            mensaje += `${item.nombre} Cantidad: ${item.cantidad}\n`;
         });
 
         // Añadir el total al mensaje
         const totalPrice = document.getElementById('totalPrice').textContent;
         mensaje += `\nTotal: $${totalPrice}`;
 
-        // Redirigir a WhatsApp con el mensaje
+        
         const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensaje)}`;
         window.open(url, '_blank');
     });
