@@ -127,7 +127,7 @@ footer {
   }
   /* ERROR 404 */
   #error404{ 
-    color: #ff0000;
+    color: #000;
   }
 
 .backhome {
@@ -160,4 +160,10 @@ footer {
 .product-card1{
   background-color: #3b3e44;
   box-shadow: #058f3e;
+}
+
+/*BUSCADOR */
+
+#buscador {
+  border: 1px solid #ccc;
 }

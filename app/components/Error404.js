@@ -7,6 +7,7 @@ export function Error404 () {
         <h3>Error 404</h3>
         <img id="crz" class="error" src="app/assets/icons/cruz.png" alt="cruz" />
       </div>
+      <p class="perror">"No se encuentra la página"</p>
       <a href="" class="backhome">Volver al inicio</a>
     `
 

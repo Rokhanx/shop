@@ -168,9 +168,10 @@ aside{
   }
     /* ERROR 404 */
     #error404{
-      color: #da0303;
+      color: #000;
+      
     }
-  
+ 
   .backhome {
       color: #000;
       background-color: #fff;
@@ -199,4 +200,12 @@ aside{
   .carousel-button:hover{
     color: red;
     transform:translate(5);
+  }
+
+  /* Buscador */
+  
+  #buscador{
+    background-color: #bbb9b9;
+    border: 1px solid #000000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
