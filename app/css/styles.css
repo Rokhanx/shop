@@ -149,6 +149,7 @@ Main#section{
 }
 /* CATEGORIAS */
 .categorias{
+  display: none;
   max-height: max-content;
   min-width: 15%;
   padding: 2rem;
@@ -211,6 +212,7 @@ Main#section{
 
 /* Buscador */
 .search-container {
+  display: none;
   position: relative;
   width: 100%;
   max-width: 400px;

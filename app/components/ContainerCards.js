@@ -75,6 +75,9 @@ export const ContainerCards = () => {
             });
 
             productosSection.appendChild(productCard);
+            //Mostrar cosas ocultas
+            aside.style.display = "block";
+            divBuscador.style.display = "block";
         });
     }
 
@@ -88,6 +91,7 @@ export const ContainerCards = () => {
         
         mostrarProductos(null, productosFiltrados); 
     }
+    
 
     return main;
 };
