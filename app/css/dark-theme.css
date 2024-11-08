@@ -151,7 +151,6 @@ footer {
 }
 .carousel-button{
   background-color: #ccc;
- 
 }
 .carousel-button:hover{
   color: red;
@@ -168,5 +167,9 @@ footer {
   background-color: #2e2e2e;
   border: 1px solid #000000;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+::placeholder{
   color: #fff;
 }
