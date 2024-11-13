@@ -159,9 +159,6 @@ Main#section{
   transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
-div.categoryList{
-
-}
 
 .categorias h2 {
   text-align: start;
