@@ -12,10 +12,7 @@ export const ContainerCards = () => {
     main.appendChild(aside);
     aside.appendChild(CategoryList());
 
-    let ul = document.createElement("ul");
-    ul.id = "categoryList";
-    ul.setAttribute("class", "desplegado");
-    aside.appendChild(ul);
+
     
     let div = document.createElement("div");
     div.setAttribute("class", "main-content");

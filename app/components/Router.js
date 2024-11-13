@@ -20,7 +20,7 @@ export const Router = async () =>{
 
     
 
-    if (location.hash === "" || hash == "#/"){
+    if (location.hash === "" || location.hash == "#/"){
         const homeContent = await homepage();
         section.appendChild(homeContent);   
     } else if (location.hash  === "#/catalogo"){

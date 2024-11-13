@@ -49,7 +49,8 @@ export const ModalCarrito = () => {
         carrito.forEach(item => {
             //const nombre = item.querySelector('.item-name').textContent;
             //const cantidad = item.querySelector('.item-quantity').textContent;
-            mensaje += `${item.nombre} Cantidad: ${item.cantidad}\n`;
+            mensaje += `${item.nombre} Cantidad: ${item.cantidad}
+            Precio: ${item.nombre}\n`;
         });
 
         // Añadir el total al mensaje

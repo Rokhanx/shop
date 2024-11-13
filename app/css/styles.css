@@ -149,13 +149,18 @@ Main#section{
 }
 /* CATEGORIAS */
 .categorias{
+  justify-self: center;
   display: none;
   max-height: max-content;
   min-width: 15%;
-  padding: 2rem;
+  padding: 0rem 2rem;
   margin: 2rem; 
   border-radius: 12px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+div.categoryList{
+
 }
 
 .categorias h2 {
@@ -165,6 +170,7 @@ Main#section{
   justify-content: space-between;
   height: 3rem;
   cursor: pointer;
+
 }
 
 .categorias .flecha {
@@ -179,10 +185,11 @@ Main#section{
 
 .categorias ul {
   list-style: none;
-  padding: 0;
+  padding: 5px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.6s ease; 
+  margin: 0px;
 }
 
 .categorias ul.desplegado {
@@ -190,7 +197,7 @@ Main#section{
 }
 
 .categorias ul li {
-  padding: 0.75rem 0;
+  padding: 0.60rem 0;
   cursor: pointer;
   transition: color 0.3s ease, padding-left 0.3s ease;
 }
@@ -265,7 +272,6 @@ div.main-content{
   min-height: 350px; 
   border-radius: 10px;
   padding: 1rem;
-  margin: 1rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -390,10 +396,8 @@ div.main-content{
   #buscador {
     max-width: 90%;
     width: 100%;
-    padding: 0.5rem 2rem;
     font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
     background-color: #fff;
   }
 
