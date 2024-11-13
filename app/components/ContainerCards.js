@@ -2,6 +2,9 @@ import { getCategorizedData } from "../helpers/ajax.js";
 import { agregarAlCarrito, carrito } from "./Carrito.js";
 import { sheetNames } from "../helpers/urls.js";
 import { CategoryList } from "./CategoryList.js";
+import { selectedProductName } from "../js/home.js"
+import { selectedCategory } from "../js/home.js";
+
 
 export const ContainerCards = () => {
 
@@ -43,11 +46,31 @@ export const ContainerCards = () => {
             categoryList.appendChild(li);
         }
 
-        // Mostrar productos de la categoría por defecto
+        // Mostrar productos de la categoría por defect
         const defaultCategory = sheetNames[0];
+        console.log(sheetNames[0])
         mostrarProductos(defaultCategory, categorizedObjects[defaultCategory]);
         productosActuales = categorizedObjects[defaultCategory]; // Actualizar productos de la categoría por defecto
+
+
+        //filtrar el producto desde home
+        if (selectedProductName !== ""){
+            console.log(selectedProductName)
+            const searchInput = document.querySelector("#buscador");
+            searchInput.value = selectedProductName;
+            console.log("1")
+            console.log(selectedCategory)
+            mostrarProductos(selectedCategory, categorizedObjects[selectedCategory]);
+            productosActuales = categorizedObjects[selectedCategory];
+            searchInput.dispatchEvent(new Event("input"));
+        }
+
+        
+
+
     });
+    
+
 
     // Función para mostrar los productos de una categoría
     function mostrarProductos(categoria, productos) {
@@ -88,7 +111,8 @@ export const ContainerCards = () => {
         
         mostrarProductos(null, productosFiltrados); 
     }
-    
+
+
 
     return main;
 };

@@ -3,6 +3,7 @@ import { ModalCarrito } from "./ModalCarrito.js"
 import { Carrito } from "./Carrito.js"
 import { homepage } from "../js/home.js"
 import { Error404 } from "./Error404.js"
+import { selectedProductName } from "../js/home.js"
 
 
 
@@ -25,6 +26,18 @@ export const Router = async () =>{
         section.appendChild(homeContent);   
     } else if (location.hash  === "#/catalogo"){
         document.querySelector("#section").appendChild(ContainerCards())
+
+        //if (selectedProductName) {
+        //    const searchInput = document.querySelector("#buscador"); // Input de búsqueda
+        //    searchInput.value = selectedProductName; // Coloca el nombre en el buscador
+        //    await new Promise(resolve => setTimeout(resolve, 2000));
+        //   searchInput.dispatchEvent(new Event("input")); // Dispara el evento de búsqueda
+        //    console.log(selectedProductName)
+        //    //selectedProductName = ""; // Limpia la variable después de usarla
+        //}
+
+
+
     } else {
         //Muestra una pagina de error en el caso que la url este mal
         document.querySelector("#section").appendChild(Error404())

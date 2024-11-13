@@ -1,6 +1,9 @@
 import { getCategorizedData } from "../helpers/ajax.js";
 import { sheetHome } from "../helpers/urls.js"; // Asegúrate de importar SheetHome
 
+export let selectedProductName = "";
+export let selectedCategory = "";
+
 export const homepage = async () => {
     const categorizedObjects = await getCategorizedData(sheetHome);
     
@@ -37,8 +40,20 @@ export const homepage = async () => {
                 <img src="app/assets/images/productos/${producto.imagen}" alt="${producto.nombre}">
                 <p id="desc">${producto.descripcion}</p>
                 <p id="prec">Precio: $${producto.precio}</p>
+                <p hidden>${producto.categoria}</p>
+
+                <button class="productoHome">Ver en el Catalogo</button>
             `;
-            imageContainer.appendChild(productCard); // Agregar las tarjetas dentro del imageContainer
+            imageContainer.appendChild(productCard); 
+
+
+            const button = productCard.querySelector(".productoHome");
+            button.addEventListener("click", () => {
+            selectedCategory = producto.categoria;
+            selectedProductName = producto.nombre;
+            //console.log(selectedProductName)
+             location.hash = `#/catalogo`; // Redirige con el nombre codificado
+            });
         });
 
         // Mostrar solo la imagen actual
