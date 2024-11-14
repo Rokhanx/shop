@@ -47,5 +47,37 @@ export const Events = () => {
     themeToggle.addEventListener("click", toggleTheme);
 
 
+        // Obtener el botón de subir, el carrito y el header
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        const floatingCart = document.getElementById('floating-cart');
+        const header = document.getElementById('main-header');
+        // Verificar que los elementos existan
+        if (!scrollTopBtn || !floatingCart || !header) {
+            console.error("Error: No se encontró uno o más elementos necesarios.");
+            return;
+        }
+        // Mostrar el botón y el carrito cuando el header desaparezca (al hacer scroll hacia abajo)
+        window.onscroll = function () {
+            if (window.scrollY > header.offsetHeight) {
+                floatingCart.style.display = 'flex'; // Mostrar carrito flotante
+                scrollTopBtn.style.display = 'block'; // Mostrar botón de subir
+            } else {
+                floatingCart.style.display = 'none'; // Ocultar carrito flotante
+                scrollTopBtn.style.display = 'none'; // Ocultar botón de subir
+            }
+        };
+
+    const btntop = document.getElementById("btn-to-top")
+    btntop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+    });
+    //Asignar evento de abrir modal al floating-cart
+    const modal = document.getElementById("carritoModal");
+    document.querySelector(".floating-cart").addEventListener("click", () => {
+        modal.style.display = "block";
+        renderCartItems();
+    });
+
 
 };

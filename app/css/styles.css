@@ -422,9 +422,6 @@ div.main-content{
     font-size: 1rem;
   }
 
-  .floating-cart {
-    top: 90px;
-  }
 
   /*ERROR 404 Y BOTON DE VOLVER */
   #error404 {
@@ -560,9 +557,6 @@ div.main-content{
     font-size: 1rem;
   }
 
-  .floating-cart {
-    top: 90px;
-  }
 
   /* Estilos para la sección de error 404 y botón de volver */
   #error404 {
@@ -756,7 +750,7 @@ div.main-content{
 #scrollTopBtn {
   position: fixed;
   bottom: 20px; 
-  right: 1px;
+  right: 15px;
   border: none;
   z-index: 100;
 }
@@ -768,7 +762,7 @@ div.main-content{
 .floating-cart {
   position: fixed;
   top: 70px; 
-  right: 1px; 
+  right: 15px; 
 }
 .floating-cart:hover{
   transform: scale(1.1); }

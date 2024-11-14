@@ -3,7 +3,8 @@ import { ModalCarrito } from "./ModalCarrito.js"
 import { Carrito } from "./Carrito.js"
 import { homepage } from "../js/home.js"
 import { Error404 } from "./Error404.js"
-import { selectedProductName } from "../js/home.js"
+import { FloatingCart } from "./FloatingCart.js"
+import { BtnToTop } from "./BtnTop.js"
 
 
 
@@ -26,6 +27,9 @@ export const Router = async () =>{
         section.appendChild(homeContent);   
     } else if (location.hash  === "#/catalogo"){
         document.querySelector("#section").appendChild(ContainerCards())
+
+        document.querySelector("#section").appendChild(FloatingCart())
+        document.querySelector("#section").appendChild(BtnToTop())
 
         //if (selectedProductName) {
         //    const searchInput = document.querySelector("#buscador"); // Input de búsqueda
