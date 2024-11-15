@@ -1,0 +1,1 @@
+//export const carrito = []; // Inicializa el array carrito

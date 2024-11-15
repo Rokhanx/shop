@@ -1,4 +1,4 @@
-import { carrito } from "./Carrito.js";
+import { carritoArray } from "./Carrito.js";
 
 export const ModalCarrito = () => {
     // Crear el modal
@@ -46,7 +46,7 @@ export const ModalCarrito = () => {
         //console.log(carrito.length);
 
         let mensaje = 'Hola, me gustaría realizar el siguiente pedido:\n';
-        carrito.forEach(item => {
+        carritoArray.forEach(item => {
             //const nombre = item.querySelector('.item-name').textContent;
             //const cantidad = item.querySelector('.item-quantity').textContent;
             mensaje += `${item.nombre} Cantidad: ${item.cantidad}

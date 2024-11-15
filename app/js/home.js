@@ -1,5 +1,6 @@
 import { getCategorizedData } from "../helpers/ajax.js";
 import { sheetHome } from "../helpers/urls.js"; // Asegúrate de importar SheetHome
+import { carritoArray } from "../components/Carrito.js";
 
 export let selectedProductName = "";
 export let selectedCategory = "";
@@ -106,7 +107,12 @@ export const homepage = async () => {
         carouselContainer.appendChild(prevButton);
         carouselContainer.appendChild(nextButton);
         container.appendChild(carouselContainer);
+
+
+        document.getElementById('cartCount').textContent = carritoArray.length;
+        
     });
+    
 
     return container; 
 };
