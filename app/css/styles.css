@@ -918,8 +918,9 @@ section, footer {
 a{
   text-decoration: none;
 }
+
  /* ERROR 404 */
- #error404 {
+#error404 {
   display: flex;
   flex-direction: column; 
   align-items: center;
@@ -958,3 +959,8 @@ a{
 .backhome:hover {
   transform: scale(1.05);
 }
+/* ERROR 404 *//* ERROR 404 *//* ERROR 404 *//* ERROR 404 *//* ERROR 404 *//* ERROR 404 */
+
+
+
+

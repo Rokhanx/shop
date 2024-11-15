@@ -1,5 +1,5 @@
 import { getCategorizedData } from "../helpers/ajax.js";
-import { agregarAlCarrito, carrito } from "./Carrito.js";
+import { agregarAlCarrito, carritoArray } from "./Carrito.js";
 import { sheetNames } from "../helpers/urls.js";
 import { CategoryList } from "./CategoryList.js";
 import { selectedProductName } from "../js/home.js"
@@ -91,7 +91,7 @@ export const ContainerCards = () => {
             const button = productCard.querySelector('.add-to-cart-button');
             button.addEventListener('click', () => {
                 agregarAlCarrito(producto.nombre, producto.precio, producto.imagen, button);
-                console.log(carrito);
+                console.log(carritoArray);
             });
 
             productosSection.appendChild(productCard);

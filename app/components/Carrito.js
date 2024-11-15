@@ -3,7 +3,12 @@ import { ModalCarrito } from './ModalCarrito.js';
 
 let cartCount = 0;
 
-export const carrito = []; // Inicializa el array carrito
+export const carritoArray = []; // Inicializa el array carrito
+if (localStorage.getItem("carritoArray")) {
+    const savedCart = JSON.parse(localStorage.getItem("carritoArray"));
+    carritoArray.push(...savedCart); // Actualiza el array de carrito directamente
+  
+}
 
 
 export const Carrito = () => {
@@ -22,12 +27,12 @@ export const Carrito = () => {
 
 
 export function agregarAlCarrito(nombre, precio, imagen, button) {
-    const existingProductIndex = carrito.findIndex((item) => item.nombre === nombre);
+    const existingProductIndex = carritoArray.findIndex((item) => item.nombre === nombre);
 
     if (existingProductIndex !== -1) {
-        carrito[existingProductIndex].cantidad += 1;
+        carritoArray[existingProductIndex].cantidad += 1;
     } else {
-        carrito.push({ nombre, precio, imagen, cantidad: 1 });
+        carritoArray.push({ nombre, precio, imagen, cantidad: 1 });
     }
 
     // Cambiar el texto y deshabilitar el boton
@@ -35,6 +40,7 @@ export function agregarAlCarrito(nombre, precio, imagen, button) {
     button.classList.add('button-disabled');
     button.disabled = true; // Deshabilitar el botón
 
-    document.getElementById('cartCount').textContent = carrito.length;
+    document.getElementById('cartCount').textContent = carritoArray.length;
+    document.getElementById('cartCount2').textContent = carritoArray.length;
     renderCartItems(); // Renderiza el carrito al agregar un producto
 }

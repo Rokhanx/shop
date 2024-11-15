@@ -1,5 +1,7 @@
 import { renderCartItems } from "../components/RenderCart.js";
 
+import { carritoArray } from "../components/Carrito.js";
+
 
 
 export const Events = () => {
@@ -79,5 +81,7 @@ export const Events = () => {
         renderCartItems();
     });
 
+    document.getElementById('cartCount').textContent = carritoArray.length;
+    document.getElementById('cartCount2').textContent = carritoArray.length;
 
 };
