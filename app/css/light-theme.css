@@ -209,3 +209,11 @@ aside{
     border: 1px solid #000000;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
+
+  .productoHome {
+    background-color: #ff0000;
+    color: white;
+}
+  .productoHome:hover{
+    background-color: #c21111;
+}
