@@ -526,9 +526,7 @@ div.main-content{
   }
 
   #buscador {
-    max-width: 100%;
     width: 100%;
-    
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
