@@ -353,7 +353,7 @@ div.main-content{
   }
   
   .categorias {
-    min-width: 250px;
+
     width: 100%;
     margin-bottom: 2rem;
     padding: 1rem;
@@ -371,6 +371,7 @@ div.main-content{
     gap: 1.5rem;
   }
   .product-card {
+    min-width: 250px;
     width: 100%;
     min-height: 300px;
   }
