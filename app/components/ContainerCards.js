@@ -96,7 +96,7 @@ export const ContainerCards = () => {
 
             productosSection.appendChild(productCard);
             //Mostrar cosas ocultas
-            aside.style.display = "flex";
+            aside.style.display = "block";
             divBuscador.style.display = "flex";
             
         });
