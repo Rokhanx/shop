@@ -22,10 +22,7 @@ export default function App() {
 
     divRoot.appendChild(Footer())
 
-    applySavedTheme()
-    
-
-
+    applySavedTheme() //aplica modo claro/oscuro guardado
     
 
     Router()

@@ -31,15 +31,6 @@ export const Router = async () =>{
         document.querySelector("#section").appendChild(FloatingCart())
         document.querySelector("#section").appendChild(BtnToTop())
 
-        //if (selectedProductName) {
-        //    const searchInput = document.querySelector("#buscador"); // Input de búsqueda
-        //    searchInput.value = selectedProductName; // Coloca el nombre en el buscador
-        //    await new Promise(resolve => setTimeout(resolve, 2000));
-        //   searchInput.dispatchEvent(new Event("input")); // Dispara el evento de búsqueda
-        //    console.log(selectedProductName)
-        //    //selectedProductName = ""; // Limpia la variable después de usarla
-        //}
-
 
 
     } else {

@@ -5,4 +5,4 @@ export const DATAURL = `https://docs.google.com/spreadsheets/d/${SHEETID}/gviz/t
 // Obtiene los datos categorizados desde múltiples hojas
 export const sheetNames = ["Auriculares", "Otros", "Teclados", "Mouse", "Camaras", "Consolas", "Joystick", "Relojes", "Baterias Portatiles", "Lamparas", "Parlantes", "Termos / Botellas", "Mopa"];
 
-export const sheetHome = ["Destacados1", "Destacados2" ]
+export const sheetHome = ["Destacados1", "Destacados2"]

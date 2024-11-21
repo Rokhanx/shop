@@ -353,6 +353,7 @@ div.main-content{
   }
   
   .categorias {
+    min-width: 250px;
     width: 100%;
     margin-bottom: 2rem;
     padding: 1rem;

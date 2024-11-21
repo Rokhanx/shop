@@ -98,6 +98,7 @@ export const ContainerCards = () => {
             //Mostrar cosas ocultas
             aside.style.display = "block";
             divBuscador.style.display = "block";
+            
         });
     }
 
