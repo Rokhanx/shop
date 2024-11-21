@@ -229,7 +229,7 @@ Main#section{
   font-size: 1rem;
   border-radius: 25px;
   border: 1px solid #ced4da;
-  
+  width: 100%;
   max-width: 400px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -250,7 +250,7 @@ Main#section{
 }
 
 div.main-content{
-  width: 85%;
+  width: 100%;
 }
 
 
@@ -380,7 +380,7 @@ div.main-content{
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-bottom: 1rem;
+    
     position: relative;
   }
 
@@ -392,8 +392,7 @@ div.main-content{
   }
 
   #buscador {
-    max-width: 90%;
-    width: 100%;
+    min-width: 250px;
     font-size: 1rem;
     border: 1px solid #ccc;
     background-color: #fff;
@@ -527,8 +526,8 @@ div.main-content{
   }
 
   #buscador {
-    max-width: 90%;
-    width: 100%;
+   /* max-width: 90%;
+    width: 100%;*/
     padding: 0.5rem 2rem;
     font-size: 1rem;
     border: 1px solid #ccc;
