@@ -49,12 +49,12 @@ export const ModalCarrito = () => {
         carritoArray.forEach(item => {
 
 
-            mensaje += `${item.nombre} ($${item.precio}x${item.cantidad}) Precio total: $${item.cantidad * item.precio}\n`;
+            mensaje += `${item.nombre} ($${item.precio}x${item.cantidad}) Total: $${item.cantidad * item.precio}\n`;
         });
 
         // Añadir el total al mensaje
         const totalPrice = document.getElementById('totalPrice').textContent;
-        mensaje += `\nTotal: $${totalPrice}`;
+        mensaje += `\nPrecio Total: $${totalPrice}`;
 
         
         const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensaje)}`;
