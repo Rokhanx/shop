@@ -12,7 +12,7 @@ export const Footer = () => {
     footer.innerHTML=`
     <footer>
     <span>Podes comunicarte con nosotros por WhatsApp   </span>
-    <a href="${url}" target="_blank"><img src="/app/assets/icons/wsp.png" alt="img" style="width:42px;height:42px;"></a>
+    <a href="${url}" target="_blank"><img src="app/assets/icons/wsp.png" alt="img" style="width:42px;height:42px;"></a>
 </footer>
 
     `
