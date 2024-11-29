@@ -87,4 +87,6 @@ function removeItem(index) {
   carritoArray.splice(index, 1);
   renderCartItems();
   document.getElementById("cartCount").textContent = carritoArray.length;
+  document.getElementById("cartCount2").textContent = carritoArray.length;
+  
 }

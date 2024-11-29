@@ -7,7 +7,6 @@ export const carritoArray = []; // Inicializa el array carrito
 if (localStorage.getItem("carritoArray")) {
     const savedCart = JSON.parse(localStorage.getItem("carritoArray"));
     carritoArray.push(...savedCart); // Actualiza el array de carrito directamente
-  
 }
 
 
